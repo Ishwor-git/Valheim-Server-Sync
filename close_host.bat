@@ -6,7 +6,7 @@
 
 set REPO_PATH=%USERPROFILE%\Desktop\Valheim-Server-Sync
 
-set SAVE_PATH=%USERPROFILE%\Desktop\Valheim-Server-test
+set SAVE_PATH=%USERPROFILE%\AppData\LocalLow\IronGate\Valheim\worlds_local
 
 echo.
 echo [1/4] Checking save files...
