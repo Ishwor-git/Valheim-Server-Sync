@@ -4,24 +4,18 @@
 ::  Copies save files to repo folder and pushes to GitHub
 :: ============================================================
 
-:: SET YOUR REPO FOLDER PATH HERE 
-:: set REPO_PATH=C:\path\to\your\Valheim-Server-Sync
+set REPO_PATH=%USERPROFILE%\Desktop\Valheim-Server-Sync
 
-for /f "delims== tokens=1,2" %%G in (config.ini) do (
-    set %%G=%%H
-)
-
-
-set SAVE_PATH=%USERPROFILE%\AppData\LocalLow\IronGate\Valheim\worlds_local
+set SAVE_PATH=%USERPROFILE%\Desktop\Valheim-Server-test
 
 echo.
 echo [1/4] Checking save files...
-if not exist "%SAVE_PATH%\servername.fwl" (
+if not exist "%SAVE_PATH%\hydraserver.fwl" (
     echo ERROR: servername.fwl not found in %SAVE_PATH%
     pause
     exit /b 1
 )
-if not exist "%SAVE_PATH%\servername.db" (
+if not exist "%SAVE_PATH%\hydraserver.db" (
     echo ERROR: servername.db not found in %SAVE_PATH%
     pause
     exit /b 1
@@ -30,8 +24,8 @@ echo       Save files found.
 
 echo.
 echo [2/4] Copying save files to repo folder...
-copy /Y "%SAVE_PATH%\servername.fwl" "%REPO_PATH%\servername.fwl"
-copy /Y "%SAVE_PATH%\servername.db"  "%REPO_PATH%\servername.db"
+copy /Y "%SAVE_PATH%\hydraserver.fwl" "%REPO_PATH%\hydraserver.fwl"
+copy /Y "%SAVE_PATH%\hydraserver.db"  "%REPO_PATH%\hydraserver.db"
 echo       Files copied.
 
 echo.
