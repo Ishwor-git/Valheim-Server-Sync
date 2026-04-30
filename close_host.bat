@@ -31,7 +31,7 @@ echo       Files copied.
 echo.
 echo [3/4] Staging and committing...
 cd /d "%REPO_PATH%"
-git add servername.fwl servername.db
+git add .
 git commit -m "Save update: %DATE% %TIME%"
 echo       Committed.
 
