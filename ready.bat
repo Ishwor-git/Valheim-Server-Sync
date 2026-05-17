@@ -6,6 +6,11 @@
 
 :: SET YOUR REPO FOLDER PATH HERE
  set REPO_PATH=%USERPROFILE%\Desktop\Valheim-Server-Sync
+
+if not exist "%REPO_PATH%" (
+	set REPO_PATH=%USERPROFILE%\OneDrive\Desktop\Valheim-Server-Sync
+)
+
 :: ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲
 
 set SAVE_PATH=%USERPROFILE%\AppData\LocalLow\IronGate\Valheim\worlds_local
